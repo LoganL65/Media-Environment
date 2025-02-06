@@ -1,0 +1,35 @@
+let myInput;
+
+function setup() {
+  createCanvas(500, 300);
+  myInput = createInput("Denmark")
+  myInput.position(0, height-25)
+}
+
+function draw() {
+  let msg = myInput.value();
+  
+  if (msg === "Congo")
+    {
+      text(msg, 25, 55)
+        //Congo Flag
+
+   background(251, 222, 74); //yellow    
+  noStroke()
+  fill(0, 149, 67)//green
+  triangle(0, 0, width*(2/3), 0, 0, height)//G_triangle
+  fill(220, 36, 31)//red
+  triangle(width, 0, width, height, width*(1/3), height)
+}
+  else if (msg === "Denmark")
+    {
+      text(msg, 25, 55)
+      //Flag of Denmark
+  var l2xpos = 140
+  background(200, 16, 46)
+  stroke(255, 255, 255)
+  strokeWeight(40)
+  line(0, height/2, width, height/2)//horizontal
+  line(l2xpos, 0, l2xpos, height)//vertical
+    }
+}
