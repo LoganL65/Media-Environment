@@ -1,0 +1,39 @@
+//Week-09 HW
+
+function setup() {
+  createCanvas(1000, 400);
+}
+ 
+function draw() {
+  background(220);
+  var whiteW = width/20
+  var whiteH = height/1.6
+  //based on proportion of keys
+  var blackW = whiteW*(7/12)
+  var blackH = whiteH*(2/3)
+  var corner = 10
+  var offsetH = height/6
+  var offsetW = height/6
+  
+  //all the white keys
+  fill(255, 255, 255)
+  for (var i = 0; i < 14; i = i + 1)
+  {
+  rect(offsetW+(i*whiteW), offsetH, whiteW, whiteH, 0, 0, corner, corner)  
+  }
+  //black 2 groups
+  fill(0, 0, 0)
+  for (var j = 0; j < 2; j = j + 1){
+    rect(offsetW+whiteW-(blackW/2)+(j*whiteW), offsetH, blackW, blackH, 0, 0, corner, corner)   
+    rect(offsetW+8*whiteW-(blackW/2)+(j*whiteW), offsetH, blackW, blackH, 0, 0, corner, corner)  
+  }
+ 
+  
+  //black 3 groups 
+  fill(0, 0, 0)
+  for (var m = 0; m < 3; m = m + 1){
+    rect(offsetW+4*whiteW-(blackW/2)+(m*whiteW), offsetH, blackW, blackH, 0, 0, corner, corner)   
+    rect(offsetW+11*whiteW-(blackW/2)+(m*whiteW), offsetH, blackW, blackH, 0, 0, corner, corner) 
+  }
+  
+}
