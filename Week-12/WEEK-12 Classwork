@@ -1,0 +1,50 @@
+//CIRCLES
+
+var sizes = [];
+
+function setup() {
+  createCanvas(800, 300);
+  for(var i = 0; i <100; i = i +1){
+    sizes.push(random(5, 300));
+    }
+}
+
+function draw() {
+  background(220);
+  noFill();
+  strokeWeight(2);
+  
+  for(var i = 0; i < sizes.length; i = i + 1){
+     circle(width/2, height/2, sizes[i])
+    
+  }
+  
+}
+
+//ELDEN RING
+
+var words = ["I", "LOVE", "ELDEN", "RING"]
+var colors = [
+  [11,11,38],
+  [21,64,59],
+  [242,197,114],
+  [217,160,91],
+]
+
+function setup() {
+  createCanvas(800, 300);
+ textAlign(CENTER, CENTER)
+  frameRate(2)
+}
+
+function draw() {
+  var currentIndex = (frameCount-1) % words.length;
+  var currentWord = words[currentIndex];
+  var currentColor = colors[currentIndex];
+  
+  background(currentColor);
+  fill(255);
+  textSize(45);
+  text(currentWord, width/2,  height/2)
+  
+}
